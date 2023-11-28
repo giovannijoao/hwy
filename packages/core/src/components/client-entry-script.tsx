@@ -25,7 +25,7 @@ function ClientScripts({
           return (
             <script
               src={getPublicUrl(
-                "dist/pages/" + x.importPath.replace("pages/", ""),
+                "dist/pages/" + x.importPath.replace(/pages(\/|\\)/, ""),
               )}
               {...{ [pageStrategy]: true }}
             />
